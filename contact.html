@@ -30,8 +30,84 @@
     <main>
         <section class="contact">
             <h2>Contacta con nosotros</h2>
+            <div>
+                <div>
+                    Aqui va un mapa
+                </div>
+                <div>
+                    <div class="form">
+                       <form name="contacto" method="get">
+                            <div class="form-row">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                                <label for="apellidos">Apellidos:</label>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="email"></label>
+                                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div>Tipo de misión</div>
+                                <label for="tipo_mision_1">Rescate</label><!--para que el tipo radio funcione, tienen que tener ids distintos pero siempre el mismo name, sino podría seleccionar todos y yo sólo quiero poder seleccionar 1-->
+                                <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Rescate" required>
+
+                                <label for="tipo_mision_2">Ajuste de cuentas</label>
+                                <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Ajuste de cuentas" required>
+
+                                <label for="tipo_mision_3">Disparos y explosivos</label>
+                                <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Disparos y explosivos" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="ejercito">Tamaño del ejército</label>
+                                <input type="number" id="ejercito" name="ejercito" min="10" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="fecha">Fecha del trabajo:</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+
+                            <div class="form-row">
+                                <input type="submit" id="enviar">
+                            </div>
+                        </form> 
+                    </div>
+                    
+                </div>
+            </div>
         </section>
         <section class="product-price">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de servicio</th><!--en vez de td uso th porq es un head y lo pone en minuscula-->
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consulta de misión</td>
+                        <td>100 €</td>
+                    </tr>
+                    <tr>
+                        <td>Misión simple</td>
+                        <td>500 €</td>
+                    </tr>
+                    <tr>
+                        <td>Rescate</td>
+                        <td>1000 €</td>
+                    </tr>
+                    <tr>
+                        <td>Salvar Gotham</td>
+                        <td>15.000 €</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </section>
     </main>
