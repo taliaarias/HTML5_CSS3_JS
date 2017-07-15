@@ -14,6 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Kurale', serif;
+	--main-text-color: #F7F7F7; /*estas variables no las reconoce explorer edge*/
 }
 
 .clearfix:after {
@@ -21,11 +22,11 @@ body {
 	visibility: hidden;
 	display: block;
 	height: 0;
-	clear: both;
+	clear: both; 
 }
 
 .navbar {
-	background-color: #F7F7F7;
+	background-color: var(--main-text-color);
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -50,12 +51,12 @@ body {
 	display: inline-block /*para que respete los paddings, tb hay que ponerlo en el "navbar-item". PERO yo lo he omitido en otra web y ha funcionado*/
 }
 .navbar > .navbar-list > .navbar-item a:hover {/*le ponemos la pseudoclase hover, q es cuando pasemos el ratón por encima*/
-	color: #F7F7F7;
+	color: var(--main-text-color);
 	background-color: #a4a4a4;
 }
 
 .navbar > .navbar-list > .navbar-item.active a {
-	color: #F7F7F7;
+	color: var(--main-text-color);
 	background-color: #a4a4a4;
 }
 
@@ -88,6 +89,18 @@ body {
 	font-size: 28px;
 	color: white;
 	font-family: batman; 
+}
+
+.section-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.section-reverse {
+	background-color: rgba(0, 0, 0, 0.92);
+	color: var(--main-text-color);
+	margin-left: calc(-50vw + 50%); /*para saltarnos el margen que deja a los laterales al haber puesto un max-widht de 1200px*/
+	margin-right: calc(-50vw + 50%);
 }
 
 .about-me > .batman-video {

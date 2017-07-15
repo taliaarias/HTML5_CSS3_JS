@@ -4,6 +4,10 @@
     margin: 0 auto; /*para centarlo, arriba y abajo sin márgenes (0) y en los laterales centrado (auto)*/
 }
 
+:root {/*con esto indico q voy a usar la variable en todo el doc, tb podría poner body*/
+    --grid-number: 12; /*es necesario poner doble guion antes del nombre de la variable para que lo reconozca como tal.esta variable podría sustituirla en todos los números 12*/
+}/*no uso esta variable porque no la soporta Edge*/
+
 .row:before, /*es otro estilo de clearfix, siempre que hay float, hay que ponerle altura*/
 .row:after {
     content: "";
@@ -12,57 +16,57 @@
 }
 
 .col-1 {
-    width: 8.33333333%; /*para calcular: si el 100% son 12 columnas, cuanto es 1 columna*/
+    width: calc(100% /12); /*para calcular: si el 100% son 12 columnas, cuanto es 1 columna*/
     float: left; /*las posicionamos*/
 }
 
 .col-2 {
-    width: 16.66666667%;
+    width: calc(calc(100% /12)*2);/*Edge no está soportando calc*/
     float: left;
 }
 
 .col-3 {
-    width: 25%;
+    width: calc(calc(100% /12)*3);
     float: left;
 }
 
 .col-4 {
-    width: 33.33333333%;
+    width: calc(calc(100% /12)*4);
     float: left;
 }
 
 .col-5 {
-    width: 41.66666667%;
+    width: calc(calc(100% /12)*5);
     float: left;
 }
 
 .col-6 {
-    width: 50%;
+    width: calc(100% /2);;
     float: left;
 }
 
 .col-7 {
-    width: 58.33333333%;
+    width: calc(calc(100% /12)*7);
     float: left;
 }
 
 .col-8 {
-    width: 66.66666667%;
+    width: calc(calc(100% /12)*8);
     float: left;
 }
 
 .col-9 {
-    width: 75%;
+    width: calc(calc(100% /12)*9);
     float: left;
 }
 
 .col-10 {
-    width: 83.33333333%;
+    width: calc(calc(100% /12)*10);
     float: left;
 }
 
 .col-11 {
-    width: 91.66666667%;
+    width: calc(calc(100% /12)*11);
     float: left;
 }
 
