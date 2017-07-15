@@ -1,0 +1,73 @@
+.container {
+    width: 100%; /*para que ocupe siempre el 100% de la pantalla pero como máximo sea 1200px*/
+    max-width: 1200px;
+    margin: 0 auto; /*para centarlo, arriba y abajo sin márgenes (0) y en los laterales centrado (auto)*/
+}
+
+.row:before, /*es otro estilo de clearfix, siempre que hay float, hay que ponerle altura*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1 {
+    width: 8.33333333%; /*para calcular: si el 100% son 12 columnas, cuanto es 1 columna*/
+    float: left; /*las posicionamos*/
+}
+
+.col-2 {
+    width: 16.66666667%;
+    float: left;
+}
+
+.col-3 {
+    width: 25%;
+    float: left;
+}
+
+.col-4 {
+    width: 33.33333333%;
+    float: left;
+}
+
+.col-5 {
+    width: 41.66666667%;
+    float: left;
+}
+
+.col-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-7 {
+    width: 58.33333333%;
+    float: left;
+}
+
+.col-8 {
+    width: 66.66666667%;
+    float: left;
+}
+
+.col-9 {
+    width: 75%;
+    float: left;
+}
+
+.col-10 {
+    width: 83.33333333%;
+    float: left;
+}
+
+.col-11 {
+    width: 91.66666667%;
+    float: left;
+}
+
+.col-12 {
+    width: 100%;
+    float: left;
+}
+

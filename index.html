@@ -3,12 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport">
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+	
 	<title>Mi primera web</title>
 </head>
 <body>
 	<header class="header">
 		<h1 class="title">Batman</h1>
-		<img class="title-img" src="images/batman.jpg" alt="Foto de Batman">
+		<div class="title-img"></div>
+		<!--<img class="title-img" src="images/batman.jpg" alt="Foto de Batman">-->
 		<p class="title-quote">"Él puede tomar la decisión que nadie más puede, la decisión correcta"</p>
 	</header>
 
@@ -35,10 +41,10 @@
 		</ul>
 	</nav>
 	
-	<main>
-		<section class="about-me">
+	<main class="container">
+		<section class="about-me clearfix">
 			<div class="batman-video">
-				<video width="320" controls> 
+				<video width="550" height="300" controls> 
 				<source src="video/batman.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -48,9 +54,9 @@
 				<span class="batman-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsam maiores tempora dolor animi tenetur, ex explicabo. Quas, expedita odit vitae odio! Reiciendis explicabo eos at, velit similique magni tempore!</span> <!--span es para contenidos en línea y div es para que nos haga un salto de línea-->
 			</div>
 		</section>
-		<sectionclass="team">
-			<div>
-				<div>
+		<section class="team">
+			<div class="row"><!--para meter el clearfix creado en grid, que será el que nos dé la altura-->
+				<div class="col-4">
 					<article class="team-member">
 						<header>
 							<h3>
@@ -70,7 +76,7 @@
 						</p>
 					</article>
 				</div>
-				<div>
+				<div class="col-4">
 					<article class="team-member">
 						<header>
 							<h3>
@@ -90,7 +96,7 @@
 						</p>
 					</article>
 				</div>
-				<div>
+				<div class="col-4">
 					<article class="team-member">
 						<header>
 							<h3>

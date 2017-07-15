@@ -1,0 +1,107 @@
+*	{ /*muy buena práctica ponerlo siempre, para que al añadirle padding o border a un elemento, este encoja y no altere al resto de la pág*/
+	box-sizing:	border-box;	
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing: border-box;	
+}	
+
+
+@font-face { /*para cargar una fuente que no sea de google*/
+	font-family: batman;
+	src: url(../fonts/batmfo__.ttf); /*NO ME ACEPTA ESTA FUENTE*/
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Kurale', serif;
+}
+
+.clearfix:after {
+	content: " "; /* Antiguos browsers no soportan contenido vacío*/
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.navbar {
+	background-color: #F7F7F7;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+.navbar > .navbar-list {
+	list-style-type: none;
+	margin: 0;
+	float: right;
+	font-size: 0; /*para arreglar el espacio en blanco entre los botones de la barra, decimos que la fuente no tiene tamaño, entonces no sale nada (el ul tiene 0, pero los hijos los reseteamos)*/
+}
+
+.navbar > .navbar-list > .navbar-item {
+	display: inline-block; /*tengo que ponerlo a los hijos, si lo pongo al padre (navbar-list) no funciona*/
+	font-size: 16px; /*no puedo poner 1em porque no funciona (creo q calcula 1em de 0, ya que su padre tiene 0px)*/
+}
+
+.navbar > .navbar-list > .navbar-item a {
+	padding: 20px;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.9);
+	display: inline-block /*para que respete los paddings, tb hay que ponerlo en el "navbar-item". PERO yo lo he omitido en otra web y ha funcionado*/
+}
+.navbar > .navbar-list > .navbar-item a:hover {/*le ponemos la pseudoclase hover, q es cuando pasemos el ratón por encima*/
+	color: #F7F7F7;
+	background-color: #a4a4a4;
+}
+
+.navbar > .navbar-list > .navbar-item.active a {
+	color: #F7F7F7;
+	background-color: #a4a4a4;
+}
+
+.header > .title-img {
+	background-size: 100% 100%;
+	background-repeat: none;
+	background-position: center center;
+	background-image: url(../images/batman.jpg);
+	height: 100vh;
+	
+} 
+
+.header > .title {
+	position: absolute;
+	top: 65%;
+	z-index: 1;/*para dar prioridad a las capas, profundidad*/
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-family: batman; 
+	padding-top: 2em;
+}
+
+.header > .title-quote {
+	position: absolute;
+	left: 0;
+	top: 60%;
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+	color: white;
+	font-family: batman; 
+}
+
+.about-me > .batman-video {
+	float: left;
+	max-width: 50%;
+}
+
+.about-me > .batman-info {
+	float: right;
+	max-width: 50%;
+}
+
+.team-member-photo > img {
+	height: 300px;
+	max-width: 100%;
+	border-radius: 50%;
+}
