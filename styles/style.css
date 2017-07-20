@@ -7,7 +7,7 @@
 
 @font-face { /*para cargar una fuente que no sea de google*/
 	font-family: batman;
-	src: url(../fonts/batmfo__.ttf); /*NO ME ACEPTA ESTA FUENTE*/
+	src: url(../fonts/batmfo__.ttf); 
 }
 
 body {
@@ -26,10 +26,11 @@ body {
 }
 
 .navbar {
-	background-color: var(--main-text-color);
+	background-color: #F7F7F7;
 	width: 100%;
 	position: fixed;
 	top: 0;
+	z-index: 1;
 }
 
 .navbar > .navbar-list {
@@ -48,7 +49,10 @@ body {
 	padding: 20px;
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.9);
-	display: inline-block /*para que respete los paddings, tb hay que ponerlo en el "navbar-item". PERO yo lo he omitido en otra web y ha funcionado*/
+	display: inline-block; /*para que respete los paddings, tb hay que ponerlo en el "navbar-item". PERO yo lo he omitido en otra web y ha funcionado*/
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
 }
 .navbar > .navbar-list > .navbar-item a:hover {/*le ponemos la pseudoclase hover, q es cuando pasemos el ratón por encima*/
 	color: var(--main-text-color);
@@ -62,11 +66,16 @@ body {
 
 .header > .title-img {
 	background-size: 100% 100%;
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url(../images/batman.jpg);
 	height: 100vh;
+	transition: background-size 0.5s;
 	
+} 
+
+.header > .title-img:hover {
+	background-size: 115% 115%;
 } 
 
 .header > .title {
@@ -113,10 +122,37 @@ body {
 	max-width: 50%;
 }
 
-.team-member-photo > img {
+.team-member-photo img {/*no pongo > porque no tiene descendencia directa,tiene divs entre medias*/
 	height: 300px;
 	max-width: 100%;
 	border-radius: 50%;
+}
+
+.flip {
+	height: 305px;
+	position: relative; /*conseguimos que la imagen quede por encima de las letras*/
+}
+
+.flip-img {
+	position: absolute; /*para que se superponga una imagen sobre otra*/
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transition: transform 1s;
+}
+
+.flip:hover .front {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+}
+
+.flip:hover .back {
+	transform: rotateY(0);
+	-webkit-transform: rotateY(0);
+}
+
+.back {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
 }
 
 .transport-img {
@@ -126,7 +162,7 @@ body {
 }
 
 .footer {/*comprobar qué pasa, no funciona*/
-	background-color: rgba(0, 0, 0, 0,9.2);
+	background-color: rgba(0, 0, 0, 0.92);
 	color: #F7F7F7;
 	height: 50px;
 	display: flex;
