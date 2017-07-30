@@ -12,7 +12,7 @@
 <body>
 	<header class="header">
 		<h1 class="title">Batman</h1>
-		<div class="title-img"></div>
+		<div  id="title-img-animated" class="title-img"></div>
 		<!--<img class="title-img" src="images/batman.jpg" alt="Foto de Batman">-->
 		<p class="title-quote">"Él puede tomar la decisión que nadie más puede, la decisión correcta"</p>
 	</header>
@@ -41,7 +41,8 @@
 	</nav>
 	
 	<main class="container">
-		<section class="about-me clearfix section-container">
+		<section  id="quien-soy" class="about-me clearfix section-container">
+			<button id="button">The time is?</button>
 			<div class="batman-video">
 				<video width="550" height="300" controls> 
 				<source src="video/batman.mp4" type="video/mp4">
@@ -158,4 +159,6 @@
 		Talia Arias &copy; 2017 KeepCoding
 	</footer>	
 </body>
+<script src="js/menu.js"></script><!--importamos los js al final del doc, porque los scripts son muy pesados y asi al menos se ve primero la web, si la conexion fuera muy lenta no se vería si lo pongo en el head-->
+<script src="js/animation.js"></script>
 </html>
