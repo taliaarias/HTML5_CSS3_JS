@@ -20,16 +20,16 @@
 	<nav class="navbar">
 		<ul class="navbar-list">
 			<li class="navbar-item active"><!--puede tener las clases que quiera, para poner varias las separo con un espacio. en esta pongo active para que salga siempre de inicio-->
-				<a href="">Inicio</a>
+				<a href="#">Inicio</a><!--con la almohadilla hacemos una navegación relativa dentro de nuestra web. la # referencia a los ids.-->
 			</li>
 			<li class="navbar-item">
-				<a href="">Quien soy</a>
+				<a href="#quien-soy">Quien soy</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Equipo</a>
+				<a href="#equipo">Equipo</a>
 			</li>
 			<li class="navbar-item">
-				<a href="">Transporte</a>
+				<a href="#transporte">Transporte</a>
 			</li>
 			<li class="navbar-item">
 				<a href="contact.html">Contacto</a>
@@ -42,7 +42,7 @@
 	
 	<main class="container">
 		<section  id="quien-soy" class="about-me clearfix section-container">
-			<button id="button">The time is?</button>
+			<!--<button id="button">The time is?</button>-->
 			<div class="batman-video">
 				<video width="550" height="300" controls> 
 				<source src="video/batman.mp4" type="video/mp4">
@@ -54,7 +54,7 @@
 				<span class="batman-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsam maiores tempora dolor animi tenetur, ex explicabo. Quas, expedita odit vitae odio! Reiciendis explicabo eos at, velit similique magni tempore!</span> <!--span es para contenidos en línea y div es para que nos haga un salto de línea-->
 			</div>
 		</section>
-		<section class="team section-reverse section-container">
+		<section id="equipo" class="team section-reverse section-container">
 			<div class="row container"><!--para meter el clearfix creado en grid, que será el que nos dé la altura-->
 				<div class="col-4">
 					<article class="team-member">
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="transport section-container">
+		<section id="transporte" class="transport section-container">
 			<div class="row-flex">
 				<div class="transport-item">
 					<figure>
